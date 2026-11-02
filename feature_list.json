@@ -1,0 +1,257 @@
+
+{
+  "schema_version": "1.0",
+  "project": "universal-health-skills",
+  "project_type": "platform-independent-agent-skill-platform",
+  "compatibility": {
+    "skill_format": "Agent Skills Open Specification",
+    "tool_contract": "JSON Schema",
+    "tool_integration": ["MCP", "Native Adapter", "REST API"],
+    "core_vendor_dependency": false
+  },
+  "rules": {
+    "allowed_statuses": [
+      "pending",
+      "in_progress",
+      "blocked",
+      "done"
+    ],
+    "done_requires": [
+      "acceptance_criteria_passed",
+      "verification_passed",
+      "evidence_recorded"
+    ],
+    "core_must_be_platform_independent": true
+  },
+  "features": [
+    {
+      "id": "F001",
+      "priority": "P0",
+      "category": "harness",
+      "title": "Platform-independent project harness",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Initialize a reproducible development environment",
+        "Validate all harness files",
+        "Do not require a specific Agent platform"
+      ],
+      "test_ids": ["T001"],
+      "evidence": []
+    },
+    {
+      "id": "F002",
+      "priority": "P0",
+      "category": "skill-standard",
+      "title": "Portable Skill package specification",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Follow the open Agent Skills format",
+        "Validate SKILL.md metadata",
+        "Keep core Skill packages vendor-independent",
+        "Support scripts, references and assets",
+        "Package Skills for distribution"
+      ],
+      "test_ids": ["T002"],
+      "evidence": []
+    },
+    {
+      "id": "F003",
+      "priority": "P0",
+      "category": "health-data",
+      "title": "Canonical health data model",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Define reusable JSON Schemas",
+        "Support blood glucose and blood pressure",
+        "Preserve measurement context and source",
+        "Support data normalization and validation"
+      ],
+      "test_ids": ["T003"],
+      "evidence": []
+    },
+    {
+      "id": "F004",
+      "priority": "P0",
+      "category": "health-analysis",
+      "title": "Health profile summary Skill",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Generate structured health summaries",
+        "Identify missing health information",
+        "Trace findings to original records"
+      ],
+      "test_ids": ["T004"],
+      "evidence": []
+    },
+    {
+      "id": "F005",
+      "priority": "P0",
+      "category": "health-analysis",
+      "title": "Blood glucose analysis Skill",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Distinguish fasting and post-meal records",
+        "Calculate statistical trends",
+        "Generate structured reports",
+        "Preserve source references"
+      ],
+      "test_ids": ["T005"],
+      "evidence": []
+    },
+    {
+      "id": "F006",
+      "priority": "P0",
+      "category": "health-analysis",
+      "title": "Blood pressure analysis Skill",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Analyze systolic and diastolic values",
+        "Calculate historical trends",
+        "Validate measurement quality",
+        "Generate structured reports"
+      ],
+      "test_ids": ["T006"],
+      "evidence": []
+    },
+    {
+      "id": "F007",
+      "priority": "P0",
+      "category": "skill-registry",
+      "title": "Open-source Skill discovery and reuse",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Discover existing Skill packages",
+        "Inspect source and license",
+        "Record source and version",
+        "Determine compatibility and reuse suitability"
+      ],
+      "test_ids": ["T007"],
+      "evidence": []
+    },
+    {
+      "id": "F008",
+      "priority": "P0",
+      "category": "skill-creation",
+      "title": "Natural language Skill Creator",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Convert natural language requirements into specifications",
+        "Reuse existing Skills when suitable",
+        "Generate portable Skill packages",
+        "Generate supporting resources and evaluation cases"
+      ],
+      "test_ids": ["T008"],
+      "evidence": []
+    },
+    {
+      "id": "F009",
+      "priority": "P0",
+      "category": "skill-validation",
+      "title": "Skill validation and evaluation",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Validate Skill format and metadata",
+        "Validate resources and dependencies",
+        "Run functional evaluation cases",
+        "Reject invalid Skills",
+        "Record evaluation results"
+      ],
+      "test_ids": ["T009"],
+      "evidence": []
+    },
+    {
+      "id": "F010",
+      "priority": "P0",
+      "category": "tool-contracts",
+      "title": "Platform-independent tool contracts",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Define standard logical tool capabilities",
+        "Use JSON Schema for tool inputs and outputs",
+        "Implement at least one standardized tool provider",
+        "Support provider mapping through adapters"
+      ],
+      "test_ids": ["T010"],
+      "evidence": []
+    },
+    {
+      "id": "F011",
+      "priority": "P0",
+      "category": "compatibility",
+      "title": "Multi-platform adapter architecture",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Define a common adapter interface",
+        "Separate core logic from host-specific integration",
+        "Support capability detection",
+        "Verify portable Skill packages across multiple compatible hosts"
+      ],
+      "test_ids": ["T011"],
+      "evidence": []
+    },
+    {
+      "id": "F012",
+      "priority": "P0",
+      "category": "skill-runtime",
+      "title": "Portable Skill invocation and execution",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Discover and load Skills through an adapter",
+        "Resolve logical tool dependencies",
+        "Execute supported scripts safely",
+        "Record actual execution results",
+        "Demonstrate Skill invocation through multiple integration modes"
+      ],
+      "test_ids": ["T012"],
+      "evidence": []
+    },
+    {
+      "id": "F013",
+      "priority": "P0",
+      "category": "observability",
+      "title": "Cross-platform execution traces",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Record Skill identity and version",
+        "Record tool invocation events",
+        "Record execution status and errors",
+        "Generate structured execution traces",
+        "Redact sensitive health information"
+      ],
+      "test_ids": ["T013"],
+      "evidence": []
+    },
+    {
+      "id": "F014",
+      "priority": "P0",
+      "category": "safety",
+      "title": "Health data security and safety",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Use synthetic health records by default",
+        "Validate third-party Skill trust",
+        "Restrict script execution permissions",
+        "Prevent unsupported medical conclusions",
+        "Protect sensitive health information"
+      ],
+      "test_ids": ["T014"],
+      "evidence": []
+    },
+    {
+      "id": "F015",
+      "priority": "P1",
+      "category": "visualization",
+      "title": "Universal Skill management interface",
+      "status": "pending",
+      "acceptance_criteria": [
+        "Display registered Skills",
+        "Display Skill creation workflows",
+        "Display compatibility status",
+        "Display actual execution traces",
+        "Display health reports"
+      ],
+      "test_ids": ["T015"],
+      "evidence": []
+    }
+  ]
+}
