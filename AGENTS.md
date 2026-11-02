@@ -1,4 +1,3 @@
-
 # AGENTS.md
 
 # Universal Health Agent Skills
@@ -190,3 +189,39 @@ A feature is complete only when:
 6. Security checks pass.
 7. Evidence is recorded.
 8. feature_list.json and progress.md are updated.
+
+## Session Continuity and Handoff
+
+The project must support independent development sessions.
+
+At the beginning of every session:
+
+1. Read AGENTS.md.
+2. Read feature_list.json.
+3. Read progress.md.
+4. Read session-handoff.md.
+5. Inspect the current Git working tree.
+6. Verify the actual implementation state.
+7. Identify the next unfinished feature.
+
+Never rely exclusively on handoff descriptions.
+Verify important implementation claims against actual files and tests.
+
+Before ending a session:
+
+1. Update session-handoff.md.
+2. Record completed and incomplete work.
+3. Record actual verification results.
+4. Record unresolved issues and blockers.
+5. Record uncommitted changes.
+6. Define the exact next action.
+7. Update progress.md when project-level progress changes.
+8. Update feature_list.json only when acceptance criteria
+   have actually been satisfied.
+
+The handoff must enable another independent Agent session
+to continue development without requiring the previous
+conversation history.
+
+Never claim a task is complete merely because its files
+have been generated.
