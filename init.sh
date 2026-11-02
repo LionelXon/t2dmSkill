@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 
 set -Eeuo pipefail
@@ -47,6 +46,22 @@ fi
 
 echo "[4/4] Validating project..."
 
+# Ensure handoff document exists without overwriting it.
+if [[ ! -f session-handoff.md ]]; then
+    cat > session-handoff.md <<'EOF'
+# Session Handoff
+
+## Current Objective
+Project initialization.
+
+## Current Status
+Not started.
+
+## Next Session Instructions
+Read AGENTS.md, feature_list.json and progress.md.
+Inspect the repository before starting implementation.
+EOF
+fi
 uv run python scripts/validate_harness.py
 
 echo "=== Environment ready ==="
